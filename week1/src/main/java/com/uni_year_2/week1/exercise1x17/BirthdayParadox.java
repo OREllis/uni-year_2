@@ -7,25 +7,32 @@ import java.util.*;
 public class BirthdayParadox {
 
     private static final Random DATE_GENERATOR = new SecureRandom();
+    private static final int DAYS_IN_YEAR = 364;
+    private static final int TOTAL_SIMULATIONS= 500;
 
-    public static List<LocalDate> newListOfLocalDateBirthdays() {
-        return newListOfLocalDateBirthdays(24);
+    public static double getDuplicateProbability(final int totalBirthdays){
+        int countOfDuplicates = 0;
+
+        for (int i = 0; i < TOTAL_SIMULATIONS; i++) {
+            if (containsDuplicates(newListOfLocalDateBirthdays(totalBirthdays))) {
+                countOfDuplicates++;
+            }
+        }
+
+        return (double) countOfDuplicates / TOTAL_SIMULATIONS;
     }
 
-    public static List<LocalDate> newListOfLocalDateBirthdays(int listSize) {
-        if(listSize < 23) throw new IllegalArgumentException("Number of birthdays has to be greater than 23");
-
+    private static List<LocalDate> newListOfLocalDateBirthdays(int listSize) {
         ArrayList<LocalDate> outList = new ArrayList<>(listSize);
 
         for (int i = 0; i < listSize; i++) {
-            outList.add(LocalDate.ofYearDay(2019, DATE_GENERATOR.nextInt(364) + 1));
+            outList.add(LocalDate.ofYearDay(2019, DATE_GENERATOR.nextInt(DAYS_IN_YEAR) + 1));
         }
 
         return outList;
     }
 
-    public static boolean containsDuplicates(List<LocalDate> listOfBirthdays) {
+    private static boolean containsDuplicates(List<LocalDate> listOfBirthdays) {
         return new HashSet<>(listOfBirthdays).size() < listOfBirthdays.size();
     }
-
 }
