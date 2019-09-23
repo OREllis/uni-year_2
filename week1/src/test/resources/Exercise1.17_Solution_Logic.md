@@ -70,9 +70,9 @@ at this time I am not aware of any.
 
 Probably the key thing that's likely slowing down the execution time is the fact that a new
 List is created every time "newListOfLocalDateBirthdays()" is called, as well as the fact
-that a new HashSet is created every time "containsDuplicate()"
-
-I may create branches with the code refactored for efficiency in the future, if I do, I will
-list the banches here;
+that a new HashSet is created every time "containsDuplicate()" is called within code.
+During development I didn't consider the resource cost of Object Creation and Garbage
+collection during runtime until first execution, however I may create branches with the code 
+refactored for efficiency in the future, if I do, I will list the banches here;
 
     None so far...
