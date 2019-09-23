@@ -8,7 +8,8 @@ This repo is for storing completed exercises from Strathclyde University's CS251
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from https://github.com/OREllis/uni-year_2/archive/master.zip
+Clone from https://git@github.com:OREllis/uni-year_2.git
 
 ## Usage
 
