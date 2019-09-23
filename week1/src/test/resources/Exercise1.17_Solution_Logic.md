@@ -12,18 +12,18 @@ The logic taken to solve the above issues shall be explained as follows:
 ## 1. Generating the list of dates
 This in and of itself is one that has several solutions of varying amounts
 of complexity to it. One of the easiest ways of doing this would be to 
-generate an (n) sized list of random numbers between 1 -> 365.
+simply generate an (n) sized list of random numbers between 1 -> 365.
 
 In my program I chose to use the SecureRandom class instead of the Random
 class is because it offers a greater amount of randomness than the base
-Random class due to its usage in the java.security package and its 
-compliance with the tests in the [FIPS 140-2, Security Requirements for 
-Cryptographic Models](https://csrc.nist.gov/publications/detail/fips/140/2/final)
+Random class due to its compliance requirements with the tests in the [FIPS 
+140-2, Security Requirements for Cryptographic Models
+](https://csrc.nist.gov/publications/detail/fips/140/2/final)
 requirements laid out by the National Institute of Standards and Technology.
 
 
 ## 2. Checking if there are duplicates in the list
-The way that Implemented this was through the use of the HashSet object, as set
+The way that I implemented this was through the use of the HashSet object, as set
 objects cannot contain any duplicates, so I created a new HashSet, instantiated it
 through the constructor, and compared the size of it against the size of the list of
 dates. 
@@ -68,8 +68,11 @@ of Dates and checks for duplicates instead of using the way Sets work to remove 
 such functions may exist in external libraries similar to Apache's Collections library, but
 at this time I am not aware of any.
 
-Probably the key thing that's likely slowing down the execution time is the use of LocalDate 
-objects instead of using a primitive datatype (e.g. a short or an integer) to store the dates
-being compared. By using a Primitive like a Short to store the date number instead of Creating 
-and instantiating a LocalDate Object, then assigning it to a List of LocalDate objects, all 
-that would need to be done would be to directly assign the random value to the List.
+Probably the key thing that's likely slowing down the execution time is the fact that a new
+List is created every time "newListOfLocalDateBirthdays()" is called, as well as the fact
+that a new HashSet is created every time "containsDuplicate()"
+
+I may create branches with the code refactored for efficiency in the future, if I do, I will
+list the banches here;
+
+    None so far...
