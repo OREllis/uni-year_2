@@ -9,13 +9,14 @@ This repo is for storing completed exercises from Strathclyde University's CS251
 ## Installation
 
 Download from https://github.com/OREllis/uni-year_2/archive/master.zip
+
 Clone from https://git@github.com:OREllis/uni-year_2.git
 
 ## Usage
 
 FIXME: explanation
 
-    $ java -jar clojure-project_euler-0.1.0-standalone.jar [args]
+    $ java -jar uni_year_2-0.1.0-standalone.jar [args]
 
 ## Options
 
