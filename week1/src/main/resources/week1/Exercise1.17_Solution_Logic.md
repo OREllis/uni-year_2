@@ -51,17 +51,15 @@ Generate (n) list of dates -> Check if duplicates exist
 ```
 
 Once that is completed, to get the probability, the variable that counts the number
-of duplicates has to be divided by 500 to get the percentage possibility of there
+of duplicates has to be divided by 1000 to get the percentage possibility of there
 being duplicate dates in a randomly generated list of (n) days in a year.
 
 
 ## Ways the efficiency could be improved
-There are a variety of ways that this could theoretically by made more efficient, as the avg.
-time that it takes to get the Percentage chance of duplicates is between 1.5 & 1.8 seconds 
-until it gets the result. The easiest way I could think of increasing the efficiency would be
-to use Random instead of SecureRandom to generate the number used as it uses the System Clock 
-as the seed to generate numbers instead of using Random data from the OS like Secure Random
-does.
+There are a variety of ways that this could theoretically by made more efficient. The easiest 
+way I could think of increasing the efficiency would be to use Random instead of SecureRandom 
+to generate the number used as it uses the System Clock as the seed to generate numbers 
+instead of using Random data from the OS like Secure Random does.
 
 Another one could be to implement a duplicate checking function that iterates over the list 
 of Dates and checks for duplicates instead of using the way Sets work to remove duplicates, 
