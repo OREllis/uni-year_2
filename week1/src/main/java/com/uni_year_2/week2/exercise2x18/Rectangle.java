@@ -7,6 +7,8 @@ public class Rectangle extends Square{
     public Rectangle(){
         super(1.8);
         this.width = 3.6;
+        this.setColour("Red");
+        this.setFilled(true);
     }
 
     public Rectangle(final double length, final double width){

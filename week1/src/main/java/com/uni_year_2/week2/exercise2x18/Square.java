@@ -6,6 +6,8 @@ public class Square extends Shape{
 
     public Square(){
         this.side = 1;
+        this.setColour("Red");
+        this.setFilled(true);
     }
 
     public Square(final double side){
