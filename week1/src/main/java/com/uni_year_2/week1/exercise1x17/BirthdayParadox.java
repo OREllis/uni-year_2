@@ -8,7 +8,7 @@ public class BirthdayParadox {
 
     private static final Random DATE_GENERATOR = new SecureRandom();
     private static final int DAYS_IN_YEAR = 364;
-    private static final int TOTAL_SIMULATIONS= 500;
+    private static final int TOTAL_SIMULATIONS= 1000;
 
     public static double getDuplicateProbability(final int totalBirthdays){
         int countOfDuplicates = 0;
