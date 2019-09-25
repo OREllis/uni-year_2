@@ -1,8 +1,8 @@
-package com.uni_year_2.week1.exercise1x8;
+package com.uni_year_2.week2.exercise2x9;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CircleTest {
 
