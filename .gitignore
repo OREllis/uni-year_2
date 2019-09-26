@@ -1,13 +1,4 @@
-
-.idea/**/dictionaries
-.idea/**/shelf
-.idea/**/*.xml
-.idea/*.xml
-
-# auto-import.
-.idea/modules.xml
-.idea/*.iml
-.idea/modules
+.idea/*
 *.iml
 *.ipr
 *.iml
