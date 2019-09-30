@@ -33,7 +33,7 @@ public class RectangleTest {
     }
 
     @Test
-    public void testAllArgsConstructorOverload(){
+    public void testAllArgsConstructorOverload() {
         rectangle = new Rectangle(1.6, 2.5, "Blue", true);
         assertEquals(rectangle.getLength(), 1.6, 0);
         assertEquals(rectangle.getWidth(), 2.5, 0);

@@ -14,17 +14,17 @@ public class Circle extends Shape {
 
     private double radius;
 
-    public Circle(){
+    public Circle() {
         this.radius = 1.8;
         this.setColour("Red");
     }
 
-    public Circle(double radius){
+    public Circle(double radius) {
         this.radius = radius;
         this.setColour("Red");
     }
 
-    public Circle(final double radius, final String colour, final boolean filled){
+    public Circle(final double radius, final String colour, final boolean filled) {
         this(radius);
         this.setColour(colour);
         this.setFilled(filled);
@@ -38,11 +38,11 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    public double getArea(){
+    public double getArea() {
         return Math.PI * Math.pow(this.radius, 2);
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         return 2 * Math.PI * this.radius;
     }
 

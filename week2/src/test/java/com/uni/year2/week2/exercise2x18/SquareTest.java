@@ -32,7 +32,7 @@ public class SquareTest {
     }
 
     @Test
-    public void testAllArgsConstructorOverload(){
+    public void testAllArgsConstructorOverload() {
         square = new Square(2.5, "Blue", true);
         assertEquals(square.getSide(), 2.5, 0);
         assertEquals(square.getColour(), "Blue");

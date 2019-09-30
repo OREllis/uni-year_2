@@ -9,23 +9,23 @@
 
 package com.uni.year2.week2.exercise2x18;
 
-public class Rectangle extends Square{
+public class Rectangle extends Square {
 
     private double width;
 
-    public Rectangle(){
+    public Rectangle() {
         super(1.8);
         this.width = 3.6;
         this.setColour("Red");
         this.setFilled(true);
     }
 
-    public Rectangle(final double length, final double width){
+    public Rectangle(final double length, final double width) {
         this.width = width;
         this.setSide(length);
     }
 
-    public Rectangle(final double length, final double width, final String colour, final boolean filled){
+    public Rectangle(final double length, final double width, final String colour, final boolean filled) {
         this.width = width;
         this.setSide(length);
         this.setColour(colour);

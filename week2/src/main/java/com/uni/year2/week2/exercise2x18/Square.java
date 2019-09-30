@@ -9,21 +9,21 @@
 
 package com.uni.year2.week2.exercise2x18;
 
-public class Square extends Shape{
+public class Square extends Shape {
 
     private double side;
 
-    public Square(){
+    public Square() {
         this.side = 1;
         this.setColour("Red");
         this.setFilled(true);
     }
 
-    public Square(final double side){
+    public Square(final double side) {
         this.side = side;
     }
 
-    public Square(final double side, final String colour, final boolean filled){
+    public Square(final double side, final String colour, final boolean filled) {
         this.side = side;
         this.setColour(colour);
         this.setFilled(filled);

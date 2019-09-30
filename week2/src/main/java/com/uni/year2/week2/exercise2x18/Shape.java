@@ -14,9 +14,10 @@ public abstract class Shape {
     private String colour;
     private boolean filled;
 
-    public Shape(){}
+    public Shape() {
+    }
 
-    public Shape(final String colour, final boolean filled){
+    public Shape(final String colour, final boolean filled) {
         this.colour = colour;
         this.filled = filled;
     }
@@ -46,5 +47,6 @@ public abstract class Shape {
     }
 
     public abstract double getArea();
+
     public abstract double getPerimeter();
 }

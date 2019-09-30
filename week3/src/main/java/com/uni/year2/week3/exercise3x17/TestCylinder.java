@@ -40,7 +40,7 @@ public class TestCylinder {
     }
 
     private static void printCylinders(int numOfCylinders) {
-        int printed= 0;
+        int printed = 0;
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 25; j++) {

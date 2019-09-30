@@ -23,20 +23,20 @@ public class CircleTest {
     }
 
     @Test
-    public void testRadiusConstructorOverload(){
+    public void testRadiusConstructorOverload() {
         Circle circle = new Circle(4.5);
         assertEquals(circle.getRadius(), 4.5, 0);
     }
 
     @Test
-    public void testRadiusAndColourOverload(){
+    public void testRadiusAndColourOverload() {
         Circle circle = new Circle(3.6, "Blue");
         assertEquals(circle.getRadius(), 3.6, 0);
         assertEquals(circle.getColour(), "Blue");
     }
 
     @Test
-    public void testGetArea(){
+    public void testGetArea() {
         Circle circle = new Circle(10, "Blue");
 
         assertEquals(circle.getArea(), 314.1592653589793d, 0);

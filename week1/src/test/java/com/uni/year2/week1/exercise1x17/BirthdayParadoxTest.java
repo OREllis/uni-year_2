@@ -17,7 +17,7 @@ public class BirthdayParadoxTest {
 
 
     @Test
-    public void testStandardBirthdayParadoxProbability(){
+    public void testStandardBirthdayParadoxProbability() {
         final double probability = BirthdayParadox.getDuplicateProbability(24);
 
         //This test checks if the % chance of a duplicate is approximately 50%

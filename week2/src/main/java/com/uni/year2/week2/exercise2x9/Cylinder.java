@@ -13,21 +13,21 @@ public class Cylinder extends Circle {
 
     private double height;
 
-    public Cylinder(){
+    public Cylinder() {
         super();
         this.height = 1.0;
     }
 
-    public Cylinder(final double radius, final double height){
+    public Cylinder(final double radius, final double height) {
         super(radius);
         this.height = height;
     }
 
-    public Cylinder(final double radius){
+    public Cylinder(final double radius) {
         this(radius, 1.0);
     }
 
-    public Cylinder(final double radius, final double height, final String colour){
+    public Cylinder(final double radius, final double height, final String colour) {
         super(radius, colour);
         this.height = height;
     }
@@ -40,7 +40,7 @@ public class Cylinder extends Circle {
         this.height = height;
     }
 
-    public double getVolume(){
+    public double getVolume() {
         return this.getArea() * this.height;
     }
 

@@ -19,7 +19,7 @@ public class ArrayTest {
 
 
     @Test
-    public void reverseTest(){
+    public void reverseTest() {
         int[] reverseTestArray = {1, 2, 3, 4, 5, 6};
         int[] oddTestArray = {1, 2, 3, 4, 5, 6, 7};
 
@@ -34,12 +34,12 @@ public class ArrayTest {
     }
 
     @Test
-    public void copyTest(){
+    public void copyTest() {
         assertArrayEquals(testArray, Array.copyOf(testArray));
     }
 
     @Test
-    public void copyOverloadTest(){
+    public void copyOverloadTest() {
         int[] copyTestArray = {1, 2, 3, 4, 5, 6};
 
         final int[] truncated = {1, 2, 3, 4};
@@ -51,7 +51,7 @@ public class ArrayTest {
     }
 
     @Test
-    public void swapTest(){
+    public void swapTest() {
         int[] array1 = {3, 6, 9, 12, 15, 18};
         int[] array2 = {5, 10, 15, 20, 25, 30};
 

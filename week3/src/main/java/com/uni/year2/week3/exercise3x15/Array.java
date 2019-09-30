@@ -41,8 +41,8 @@ public class Array {
         return copy;
     }
 
-    public static boolean swap(int[] array1, int[] array2){
-        if(array1.length != array2.length) return false;
+    public static boolean swap(int[] array1, int[] array2) {
+        if (array1.length != array2.length) return false;
 
         int tmp = 0;
 

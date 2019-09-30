@@ -26,13 +26,13 @@ public class CircleTest {
     }
 
     @Test
-    public void testRadiusConstructorOverload(){
+    public void testRadiusConstructorOverload() {
         circle = new Circle(4.5);
         assertEquals(circle.getRadius(), 4.5, 0);
     }
 
     @Test
-    public void testRadiusAndColourOverload(){
+    public void testRadiusAndColourOverload() {
         circle = new Circle(3.6, "Blue", true);
         assertEquals(circle.getRadius(), 3.6, 0);
         assertEquals(circle.getColour(), "Blue");
@@ -40,13 +40,13 @@ public class CircleTest {
     }
 
     @Test
-    public void testGetArea(){
+    public void testGetArea() {
         circle = new Circle(10, "Blue", false);
         assertEquals(circle.getArea(), 314.1592653589793d, 0);
     }
 
     @Test
-    public void testGetPerimeter(){
+    public void testGetPerimeter() {
         circle = new Circle(5);
         assertEquals(circle.getPerimeter(), 31.41592653589793, 0);
     }
