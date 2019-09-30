@@ -10,36 +10,38 @@ package com.uni.year2.week3.exercise3x17;
  *   exact same and it all passes.
  */
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class Cylinder extends Circle {
 
     private double height;
 
-    public Cylinder(){
+    public Cylinder() {
         super();
         this.height = 1.0;
     }
 
-    public Cylinder(final double radius, final double height){
+    public Cylinder(final double radius, final double height) {
         super(radius);
         this.height = height;
     }
 
-    public Cylinder(final double radius, final double height, final String colour){
+    public Cylinder(final double radius) {
+        this(radius, 1.0);
+    }
+
+    public Cylinder(final double radius, final double height, final String colour) {
         super(radius, colour);
         this.height = height;
     }
 
-    public double getVolume(){
+    public double getVolume() {
         return this.getArea() * this.height;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Cylinder(radius: " + this.getRadius() +
                 ", height:" + this.height +
                 ", colour:" + this.getColour() +
