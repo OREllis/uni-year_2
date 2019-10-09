@@ -258,7 +258,6 @@ public class SinglyLinkedList<E> implements Cloneable {
         return sb.toString();
     }
 
-
     /* ===========================================
     *   SOLUTION TO Wk4.11 (1)
     * ===========================================*/
@@ -272,5 +271,14 @@ public class SinglyLinkedList<E> implements Cloneable {
         }
 
         return size;
+    }
+
+    /* ===========================================
+     *   SOLUTION TO Wk4.11 (4)
+     * ===========================================*/
+    public void rotate(){
+        E tmp = head.element;
+        head.element = tail.element;
+        tail.element = tmp;
     }
 }

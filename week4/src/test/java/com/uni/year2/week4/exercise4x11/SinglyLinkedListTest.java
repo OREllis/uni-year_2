@@ -45,4 +45,18 @@ public class SinglyLinkedListTest {
 
         assertEquals(linkedList.getSize(), 0);
     }
+
+    @Test
+    public void testRotate(){
+        linkedList = new SinglyLinkedList<>();
+
+        for (int i = 1; i < 6; i++) {
+            linkedList.addLast(i);
+        }
+
+        linkedList.rotate();
+
+        assertEquals((int)linkedList.first(), 5);
+        assertEquals((int)linkedList.last(), 1);
+    }
 }
