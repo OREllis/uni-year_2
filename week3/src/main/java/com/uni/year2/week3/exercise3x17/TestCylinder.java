@@ -26,6 +26,21 @@ public class TestCylinder {
 
     }
 
+    //Default implementation
+    private static void makeCylinders() {
+        int totalCylinders = getValidNumberOfCylinders();
+        int addedCylinders = 0;
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 25; j++) {
+                if (addedCylinders == totalCylinders) return;
+
+                cylinders[i][j] =  new Cylinder(getValidRadius(), getValidHeight(), getColour());
+                addedCylinders++;
+            }
+        }
+    }
+
     private static void makeCylinders(final Cylinder cylinder, final int numOfCylinders) {
         int addedCylinders = 0;
 
@@ -45,7 +60,7 @@ public class TestCylinder {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 25; j++) {
                 if (printed == numOfCylinders) return;
-                System.out.println((i + 1) + ", " + (j + 1) + ": " + cylinders[i][j]);
+                System.out.println(printed + ": " + cylinders[i][j]);
                 printed++;
             }
         }

@@ -13,6 +13,7 @@ public class Array {
 
     public static void reverse(int[] array) {
         int tmp = 0;
+
         for (int bottom = 0, top = array.length - 1; bottom < top; bottom++, top--) {
             tmp = array[bottom];
             array[bottom] = array[top];
