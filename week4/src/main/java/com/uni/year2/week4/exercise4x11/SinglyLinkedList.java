@@ -258,6 +258,10 @@ public class SinglyLinkedList<E> implements Cloneable {
         return sb.toString();
     }
 
+
+    /* ===========================================
+    *   SOLUTION TO Wk4.11 (1)
+    * ===========================================*/
     public int getSize(){
         Node node = head;
         int size = 0;

@@ -179,4 +179,35 @@ public class CircularlyLinkedList<E> {
     sb.append(")");
     return sb.toString();
   }
+
+  /* ===========================================
+   *   SOLUTION TO Wk4.11 (2)
+   * ===========================================*/
+  public int getSize(){
+    if(tail == null) return 0;
+
+    Node first = tail;
+    Node iterate = tail.getNext();
+    int size = 1;
+
+    while(iterate != first){
+      size++;
+      iterate = iterate.next;
+    }
+
+    return size;
+  }
+
+//======================================================================
+//Recursive solution, comment above solution before uncommenting below:
+//======================================================================
+//  public int getSize(){
+//    if(tail == null) return 0;
+//    return getNodeCount(tail, tail.next);
+//  }
+//
+//  private int getNodeCount(Node head, Node current){
+//    if(current == head) return 1;
+//    return 1 + getNodeCount(head, current.next);
+//  }
 }

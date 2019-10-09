@@ -222,4 +222,19 @@ public class DoublyLinkedList<E> {
     sb.append(")");
     return sb.toString();
   }
+
+  /* ===========================================
+   *   SOLUTION TO Wk4.11 (3)
+   * ===========================================*/
+  public int getSize(){
+    Node node = header;
+    int size = 0;
+
+    while(node != null){
+      size++;
+      node = node.next;
+    }
+
+    return size - 2;
+  }
 } //----------- end of DoublyLinkedList class -----------
