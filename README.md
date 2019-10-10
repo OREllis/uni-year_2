@@ -1,10 +1,18 @@
 # University Year 2 Programming Projects
 ## Introduction:
-This repo is for storing completed exercises from Strathclyde University's CS251 (Programming 2) Course. The solutions to these tasks have been created using maven to handle dependencies, so any external libraries used in the solution to these exercises (e.g. JUnit, Mockito, etc.) will be libararies available on Maven's public repositories.
+This repo is for storing completed exercises from Strathclyde University's CS251 (Programming 2) Course. The solutions to these 
+tasks have been created using maven to handle dependencies, so any external libraries used in the solution to these exercises (e.g. JUnit, Mockito, etc.) will be libararies available on Maven's public repositories.
+
+Solutions to weekly exercises on this course will be implemented in their own sub-projects and folders of the overall project 
+with the naming convention of week1 - weekn. Each week's projects will have their own unit tests to act as evidence that the 
+code answers the question(s) it was made for.
 
 ## Contents:
     ### Week 1:
     Exercise 1.8
+    
+    ### Week 2:
+    Exercise
 
 ## Installation
 
