@@ -18,10 +18,6 @@ FIXME: explanation
 
     $ java -jar uni_year_2-0.1.0-standalone.jar [args]
 
-## Options
-
-FIXME: listing of options this app accepts.
-
 ## Examples
 
 ...
