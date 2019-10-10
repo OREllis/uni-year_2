@@ -12,9 +12,10 @@ Download from https://github.com/OREllis/uni-year_2/archive/master.zip
 
 Clone from https://git@github.com:OREllis/uni-year_2.git
 
-## Usage
+This project uses maven for its dependencies and for building the project, so to install it you will need to build the project
+with maven.
 
-FIXME: explanation
+## Usage
 
     $ java -jar uni_year_2-0.1.0-standalone.jar [args]
 
