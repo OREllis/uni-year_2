@@ -25,7 +25,14 @@ with maven.
 
 ## Usage
 
-    $ java -jar uni_year_2-0.1.0-standalone.jar [args]
+    $ java -jar week1-1.0-standalone.jar [args]
+    
+    $ java -jar week2-1.0-standalone.jar [args]
+    
+    $ java -jar week3-1.0-standalone.jar [args]
+    
+    $ java -jar week4-1.0-standalone.jar [args]
+
 
 ## Examples
 
