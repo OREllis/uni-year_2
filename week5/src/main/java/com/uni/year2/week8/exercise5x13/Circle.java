@@ -7,41 +7,46 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  ******************************************************************************/
 
-package com.uni.year2.week5.exercise5x12;
+package com.uni.year2.week8.exercise5x13;
 
-public class EmpericalAnalysisAlgorithm {
+public class Circle {
 
-    public static void main(String... args) {
-        long start1 = System.nanoTime();
-        algo(50);
-        long end1 = System.nanoTime();
-        long time1 = end1 - start1;
+    private double radius;
 
-        long start2 = System.nanoTime();
-        algo(50_000);
-        long end2 = System.nanoTime();
-        long time2 = end2 - start2;
-
-        long start3 = System.nanoTime();
-        algo(500_000);
-        long end3 = System.nanoTime();
-        long time3 = end3 - start3;
-
-        long start4 = System.nanoTime();
-        algo(500_000);
-        long end4 = System.nanoTime();
-        long time4 = end4 - start4;
-
-        System.out.println(String.format("Times of execution in nanoseconds: \n1: %s,\n2: %s,\n3: %s,\n4: %s,", time1, time2, time3, time4));
+    private String colour;
+    public Circle(){
+        this.radius = 1.8;
+        this.colour = "Red";
     }
 
-    public static int[] algo(final int size) {
-        int arr[] = new int[size];
+    public Circle(double radius){
+        this.radius = radius;
+        this.colour = "Red";
+    }
 
-        for (int i = 0; i < size; i++) {
-            arr[i] = i - 1;
-        }
+    public Circle(double radius, String colour){
+        this.radius = radius;
+        this.colour = colour;
+    }
 
-        return arr;
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public double getArea(){
+        return Math.PI * Math.pow(radius, 2);
     }
 }

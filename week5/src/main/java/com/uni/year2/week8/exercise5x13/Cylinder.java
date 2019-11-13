@@ -7,46 +7,41 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  ******************************************************************************/
 
-package com.uni.year2.week5.exercise5x13;
+package com.uni.year2.week8.exercise5x13;
 
-public class Circle {
+public class Cylinder extends Circle {
 
-    private double radius;
+    private double height;
 
-    private String colour;
-    public Circle(){
-        this.radius = 1.8;
-        this.colour = "Red";
+    public Cylinder() {
+        super();
+        this.height = 1.0;
     }
 
-    public Circle(double radius){
-        this.radius = radius;
-        this.colour = "Red";
+    public Cylinder(final double radius, final double height) {
+        super(radius);
+        this.height = height;
     }
 
-    public Circle(double radius, String colour){
-        this.radius = radius;
-        this.colour = colour;
+    public Cylinder(final double radius) {
+        this(radius, 1.0);
     }
 
-
-    public double getRadius() {
-        return radius;
+    public Cylinder(final double radius, final double height, final String colour) {
+        super(radius, colour);
+        this.height = height;
     }
 
-    public String getColour() {
-        return colour;
+    public double getHeight() {
+        return this.height;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public void setColour(String colour) {
-        this.colour = colour;
+    public double getVolume() {
+        return this.getArea() * this.height;
     }
 
-    public double getArea(){
-        return Math.PI * Math.pow(radius, 2);
-    }
 }
