@@ -1,8 +1,10 @@
 package com.uni.year2.week8.exercise8x10;
 
-import com.uni.year2.week8.exercise8x10.exception.InvalidArrayLengthsException;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import static junit.framework.TestCase.assertTrue;
 import static junit.framework.TestCase.fail;
@@ -20,6 +22,9 @@ public class SortedAlternateElementsTest {
 
     @Test
     public void testIfExpectedOutput() {
-        sortedAlternateElements.getPermutationsOfCombindedArrays();
+
+        ArrayList<Integer[]> output = sortedAlternateElements.getPossibleArrays();
+        output.forEach(x -> System.out.println(Arrays.toString(x)));
+
     }
 }

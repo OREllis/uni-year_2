@@ -4,7 +4,7 @@ import com.uni.year2.week8.exercise8x10.exception.InvalidArrayLengthsException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
 
 public class SortedAlternateElements {
     //Given two sorted arrays A and B, generate all possible arrays such that first element is taken from A then from B
@@ -44,28 +44,42 @@ public class SortedAlternateElements {
         this.array2 = array2;
     }
 
-    public void getPermutationsOfCombindedArrays() {
-        final ArrayList<Integer> combindedArrays = new ArrayList<>();
-        combindedArrays.add(array1[0]);
+    public ArrayList<Integer[]> getPossibleArrays() {
+        ArrayList<Integer[]> outlists = new ArrayList<>();
 
-        populateListWithCombindedArrays(combindedArrays.get(0), true, combindedArrays);
-        System.out.println(combindedArrays);
+        for (int i = 0, j = 0; i < array1.length; i++, j = 0) {
+            while (true) {
+                int[] result = getNthOfCombinedArrs(j++, i);
+                if (result == null) break;
+                outlists.add(Arrays.stream(result).boxed().toArray(Integer[]::new));
+            }
+        }
+
+        for (int i = 0; i < outlists.size(); i++) {
+            if(outlists.get(i).length < 2) outlists.remove(i--);
+        }
+
+        return outlists;
     }
 
-    public void populateListWithCombindedArrays(final int current, boolean isA, final List<Integer> outList) {
-        int newCurrent;
+    private int[] getNthOfCombinedArrs(final int n, final int startIndex) {
+        return getNthOfCombinedArrs(0, n, startIndex, false, new int[n]);
+    }
+
+    private int[] getNthOfCombinedArrs(final int i, final int n, final int start, final boolean isA, final int[] out) {
+        if (i == out.length) return out;
 
         if (isA) {
-            newCurrent = getNext(current, 0, array2);
-            if(newCurrent == -1) return;
-            outList.add(newCurrent);
-            populateListWithCombindedArrays(newCurrent, false, outList);
-        } else {
-            newCurrent = getNext(current, 0, array1);
-            if(newCurrent == -1) return;
-            outList.add(newCurrent);
-            populateListWithCombindedArrays(newCurrent, true, outList);
+            final int next = getNext(out[i - 1], 0, array2);
+            if (next == -1) return null;
+            out[i] = next;
+            return getNthOfCombinedArrs(i + 1, n, start, false, out);
         }
+
+        final int next = (i != 0) ? getNext(out[i - 1], 0, array1) : array1[start];
+        if (next == -1) return null;
+        out[i] = next;
+        return getNthOfCombinedArrs(i + 1, n, start, true, out);
     }
 
     private int getNext(int current, final int index, int[] array) {
