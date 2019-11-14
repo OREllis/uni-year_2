@@ -51,12 +51,9 @@ public class SortedAlternateElements {
             while (true) {
                 int[] result = getNthOfCombinedArrs(j++, i);
                 if (result == null) break;
+                if (result.length < 2) continue;
                 outlists.add(Arrays.stream(result).boxed().toArray(Integer[]::new));
             }
-        }
-
-        for (int i = 0; i < outlists.size(); i++) {
-            if(outlists.get(i).length < 2) outlists.remove(i--);
         }
 
         return outlists;
